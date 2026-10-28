@@ -1,0 +1,32 @@
+{
+  "name": "@botpress/sdk",
+  "version": "2.5.0",
+  "description": "Botpress SDK",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "check:type": "tsc --noEmit",
+    "build:type": "tsc --emitDeclarationOnly --declaration",
+    "build:node": "ts-node -T build.ts",
+    "build": "pnpm build:type && pnpm build:node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@botpress/client": "0.41.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.16.12",
+    "tsup": "^8.0.2"
+  },
+  "peerDependencies": {
+    "@bpinternal/zui": "^0.13.5",
+    "esbuild": "^0.16.12"
+  },
+  "peerDependenciesMeta": {
+    "esbuild": {
+      "optional": true
+    }
+  }
+}
